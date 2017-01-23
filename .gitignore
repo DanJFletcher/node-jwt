@@ -47,3 +47,6 @@ jspm_packages
 
 ### Build ###
 dist/
+
+### Environment ###
+.env
