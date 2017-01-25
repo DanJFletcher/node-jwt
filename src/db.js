@@ -1,0 +1,24 @@
+// import mysql from 'mysql';
+import 'dotenv/config';
+
+const knex = require('knex')({
+  client: 'mysql',
+  connection: {
+    host     : process.env.MYSQL_HOST,
+    user     : process.env.MYSQL_USER,
+    password : process.env.MYSQL_PASSWORD,
+    database : process.env.MYSQL_DATABASE
+  }
+});
+
+export default knex;
+
+/**
+ * Create a MySQL connection for the app
+ */
+// export default mysql.createConnection({
+//     host     : process.env.MYSQL_HOST,
+//     user     : process.env.MYSQL_USER,
+//     password : process.env.MYSQL_PASSWORD,
+//     database : process.env.MYSQL_DATABASE
+// });
